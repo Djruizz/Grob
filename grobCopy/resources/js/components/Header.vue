@@ -13,22 +13,22 @@
                 <ul class="navbar-nav text-uppercase ms-auto custom-link">
                     <li class="nav-item">
                         <!-- <a class="nav-link" href="/Services">Servicios</a> -->
-                        <router-link class="nav-link" to="/services">Servicios</router-link>
+                        <router-link class="nav-link" to="/services" exact-active-class="text-primary">Servicios</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/products">Productos</router-link>
+                        <router-link class="nav-link" to="/products" exact-active-class="text-primary">Productos</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/catalogue">Catálogo</router-link>
+                        <router-link class="nav-link" to="/catalogue" exact-active-class="text-primary">Catálogo</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/about">Nosotros</router-link>
+                        <router-link class="nav-link" to="/about" exact-active-class="text-primary">Nosotros</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/locations">Ubicaciones</router-link>
+                        <router-link class="nav-link" to="/locations" exact-active-class="text-primary">Ubicaciones</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/contact">Contacto</router-link>
+                        <router-link class="nav-link" to="/contact" exact-active-class="text-primary">Contacto</router-link>
                     </li>
                     
                 </ul>
@@ -52,7 +52,7 @@ import feather from 'feather-icons';
 </script>
 <script setup>
 import { useRoute } from 'vue-router';
-import { onMounted, nextTick, computed  } from 'vue';
+import { computed  } from 'vue';
 
 const logo = "../images/GROB-v2.png"; 
 
@@ -64,24 +64,6 @@ const homeRoute = computed(() => {
 const adminRoute = computed(() => {
   return route.path === '/admin';
 });
-
-onMounted(async () => {
-  await nextTick(); // espera a que el DOM esté renderizado
-
-  const routeList = document.getElementsByClassName('nav-item');
-
-  for (let i = 0; i < routeList.length; i++) {
-    const link = routeList[i].querySelector('a');
-    
-    if (link && link.getAttribute('href') && link.getAttribute('href') === route.path) {
-      link.classList.add('text-primary');
-    } else if (link) {
-      link.classList.remove('text-primary');
-    }
-  }
-});
-
-
 
 
 </script>

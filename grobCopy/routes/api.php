@@ -23,5 +23,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/products', [ProductController::class, 'index']);
-Route::get('/services', [ServiceController::class, 'index']);
+Route::apiResource('services', ServiceController::class);
 Route::get('/timeline_items', [TimelineItemController::class, 'index']);

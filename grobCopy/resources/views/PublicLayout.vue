@@ -23,6 +23,5 @@ const homeRoute = computed(() => {
 <style scoped>
 .main-content{
   padding-top: 170px;
-  padding-bottom: 100px;
 }
 </style>

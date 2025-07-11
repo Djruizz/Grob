@@ -10,6 +10,8 @@ import LocationsView from '../../views/PublicViews/LocationsView.vue';
 
 import AdminLayout from '../../views/AdminLayout.vue';
 import AdminDashboard from '../../views/AdminViews/AdminDashboard.vue';
+import AdminProducts from '../../views/AdminViews/AdminProducts.vue';
+import AdminServices from '../../views/AdminViews/AdminServices.vue';
 
 const routes = [
   {
@@ -68,14 +70,14 @@ const routes = [
     //     path: 'locations',
     //     component: () => import('../../views/AdminLocations.vue')
     //   },
-    //   {
-    //     path:'products',
-    //     component: () => import('../../views/AdminProducts.vue')
-    //   },
-    //   {
-    //     path:'services',
-    //     component: () => import('../../views/AdminServices.vue')
-    //   },
+      {
+        path:'products',
+        component: AdminProducts
+      },
+      {
+        path:'services',
+        component: AdminServices
+      },
     ]
   }
 ];

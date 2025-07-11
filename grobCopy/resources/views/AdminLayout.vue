@@ -2,12 +2,10 @@
   <Navbar />
   <div class="d-md-flex">
     <Sidebar />
-
-    <div class="">
-      <div class="m-3">
-        <router-view></router-view>
-      </div>
+    <div class="content mx-3 mt-3">
+      <router-view></router-view>
     </div>
+    
   </div>
 </template>
 
@@ -17,9 +15,14 @@ import Sidebar from '../js/components/AdminComponents/Sidebar.vue'
 </script>
 
 <style scoped>
-@media (min-width: 768px) {
+.content {
+  margin-left: 16px !important;
+  margin-top: 170px !important;
+}
+@media (min-width: 767px) {
   .content {
-    margin-left: 250px;
+    width: calc(100vw - 250px);
+    margin-left: 270px !important;
   }
 }
 </style>

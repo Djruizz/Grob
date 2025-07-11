@@ -16,15 +16,12 @@
       ></button>
     </div>
     <div class="offcanvas-body">
-        <div class="text-center">
-            <img :src="`/images/GROB-v2.png`" class="mx-auto">
-        </div>
         <SidebarContent />
     </div>
   </div>
 
   <!-- Sidebar fijo en pantallas md+ -->
-  <div class="bg-dark text-white p-3 d-none d-md-block" style="width: 250px; height: calc(100vh - 150px);">
+  <div class="bg-dark text-white px-3 pt-3 d-none d-md-block fixed-top" style="width: 250px; height: calc(100vh);">
     <SidebarContent />
   </div>
 </template>
