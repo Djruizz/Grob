@@ -1,48 +1,83 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 // Importa los componentes que serán páginas
-import Home from '../../views/HomeView.vue';
-import ServicesView from '../../views/ServicesView.vue';
-import ProductsView from '../../views/ProductsView.vue';
-import AboutView from '../../views/AboutView.vue';
-import LocationsView from '../../views/LocationsView.vue';
+import PublicLayout from '../../views/PublicLayout.vue';
+import Home from '../../views/PublicViews/HomeView.vue';
+import ServicesView from '../../views/PublicViews/ServicesView.vue';
+import ProductsView from '../../views/PublicViews/ProductsView.vue';
+import AboutView from '../../views/PublicViews/AboutView.vue';
+import LocationsView from '../../views/PublicViews/LocationsView.vue';
+
+import AdminLayout from '../../views/AdminLayout.vue';
+import AdminDashboard from '../../views/AdminViews/AdminDashboard.vue';
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    component: PublicLayout,
+    children: [
+      {
+        path: '',
+        name: 'Home',
+        component: Home
+      },
+      {
+        path: '/services',
+        name: 'Services',
+        component: ServicesView
+      },
+      {
+        path: '/products',
+        name: 'Products',
+        component: ProductsView
+      },
+      {
+        path: '/catalogue',
+        name: 'Catalogue',
+        component: LocationsView
+      },
+      {
+        path: '/about',
+        name: 'About',
+        component: AboutView
+      },
+      {
+        path: '/locations',
+        name: 'Locations',
+        component: LocationsView
+      },
+      {
+        path: '/contact',
+        name: 'Contact',
+        component: LocationsView
+      },
+    ],
   },
+  
   {
-    path: '/Services',
-    name: 'Services',
-    component: ServicesView
-  },
-  {
-    path: '/Products',
-    name: 'Products',
-    component: ProductsView
-  },
-  {
-    path: '/Catalogue',
-    name: 'Catalogue',
-    component: LocationsView
-  },
-  {
-    path: '/About',
-    name: 'About',
-    component: AboutView
-  },
-  {
-    path: '/Locations',
-    name: 'Locations',
-    component: LocationsView
-  },
-  {
-    path: '/Contact',
-    name: 'Contact',
-    component: LocationsView
-  },
+    path: '/admin',
+    component : AdminLayout,
+    meta: {requiresAuth: true},
+    children: [
+      {
+        path:'',
+        name: 'AdminDashboard',
+        component: AdminDashboard,
+      },
+    //   {
+    //     path: 'locations',
+    //     component: () => import('../../views/AdminLocations.vue')
+    //   },
+    //   {
+    //     path:'products',
+    //     component: () => import('../../views/AdminProducts.vue')
+    //   },
+    //   {
+    //     path:'services',
+    //     component: () => import('../../views/AdminServices.vue')
+    //   },
+    ]
+  }
 ];
 
 const router = createRouter({

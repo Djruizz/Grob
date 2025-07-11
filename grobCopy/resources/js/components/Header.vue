@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg fixed-top px-4 py-3" :class="{'bg-dark': !homeRoute }">
+    <nav class="navbar navbar-expand-lg fixed-top px-4 py-3" :class="{'bg-dark': !homeRoute }" v-if="!adminRoute">
         <div class="container">
             <router-link class="navbar-brand m-0" to="/"><img :src="logo" alt="Logo"/></router-link>
             <span class="navbar-toggler">
@@ -13,22 +13,22 @@
                 <ul class="navbar-nav text-uppercase ms-auto custom-link">
                     <li class="nav-item">
                         <!-- <a class="nav-link" href="/Services">Servicios</a> -->
-                        <router-link class="nav-link" to="/Services">Servicios</router-link>
+                        <router-link class="nav-link" to="/services">Servicios</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/Products">Productos</router-link>
+                        <router-link class="nav-link" to="/products">Productos</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/Catalogue">Catálogo</router-link>
+                        <router-link class="nav-link" to="/catalogue">Catálogo</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/About">Nosotros</router-link>
+                        <router-link class="nav-link" to="/about">Nosotros</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/Locations">Ubicaciones</router-link>
+                        <router-link class="nav-link" to="/locations">Ubicaciones</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/Contact">Contacto</router-link>
+                        <router-link class="nav-link" to="/contact">Contacto</router-link>
                     </li>
                     
                 </ul>
@@ -60,6 +60,9 @@ const route = useRoute();
 
 const homeRoute = computed(() => {
   return route.path === '/';
+});
+const adminRoute = computed(() => {
+  return route.path === '/admin';
 });
 
 onMounted(async () => {

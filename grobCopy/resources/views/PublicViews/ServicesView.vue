@@ -10,8 +10,8 @@
 </template>
 
 <script setup>
-import TextCard from '../js/components/servicesComponents/ServiceCard.vue'
-import HeadComponent from '../js/components/HeadComponent.vue'
+import TextCard from '../../js/components/servicesComponents/ServiceCard.vue'
+import HeadComponent from '../../js/components/HeadComponent.vue'
 import feather from 'feather-icons'
 import { onMounted, ref } from 'vue';
 

@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import Header from "../js/components/Header.vue"
-import Footer from "../js/components/Footer.vue"
+import Header from "../../js/components/Header.vue"
+import Footer from "../../js/components/Footer.vue"
 
 export default{
     name:"Home",

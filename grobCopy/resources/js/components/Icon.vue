@@ -19,6 +19,9 @@ export default {
         svg() {
             return this.name ? feather.icons[this.name]?.toSvg(this.customParameters) : feather.icons['alert-triangle']?.toSvg();
         }
+    },
+    mounted(){
+        feather.replace();
     }
 }
 </script>

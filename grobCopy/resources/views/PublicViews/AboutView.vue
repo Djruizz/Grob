@@ -7,8 +7,8 @@
 
 <script setup>
 
-import HeadComponent from '../js/components/HeadComponent.vue';
-import AboutTimeline from '../js/components/aboutComponents/AboutTimeline.vue';
+import HeadComponent from '../../js/components/HeadComponent.vue';
+import AboutTimeline from '../../js/components/aboutComponents/AboutTimeline.vue';
 
 const headInfo = {
     title: "Nosotros",

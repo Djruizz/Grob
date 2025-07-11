@@ -7,8 +7,8 @@
 </template>
 
 <script setup>
-import Header from '../../js/components/Header.vue';
-import Footer from '../../js/components/Footer.vue';
+import Header from '../js/components/Header.vue';
+import Footer from '../js/components/Footer.vue';
 import { useRoute } from 'vue-router';
 import { computed } from 'vue';
 

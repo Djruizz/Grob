@@ -73,8 +73,8 @@
 <script setup>
     import { ref, onMounted } from 'vue';
 
-    import HeadComponent from '../js/components/HeadComponent.vue'
-    import Product from '../js/components/productsComponents/Product.vue'
+    import HeadComponent from '../../js/components/HeadComponent.vue'
+    import Product from '../../js/components/productsComponents/Product.vue'
 
     
     const headInfo = {
