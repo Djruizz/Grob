@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid custom-container ">
+    <div class="container-fluid custom-container">
         <div class="container">
             <div class="intro-text text-white">
                 <div class="custom-header-text">Especialistas en Suspensión, Dirección y Tracción Automotriz</div>
@@ -11,28 +11,27 @@
 </template>
 
 <script>
-import Header from "../../js/components/Header.vue"
-import Footer from "../../js/components/Footer.vue"
+import Header from '../../js/components/Header.vue';
+import Footer from '../../js/components/Footer.vue';
 
-export default{
-    name:"Home",
-    components:{
+export default {
+    name: 'Home',
+    components: {
         Header,
         Footer,
-    }
-}
+    },
+};
 </script>
 
 <style scoped>
-
-.custom-container{
+.custom-container {
     /* height: 800px; */
-    background-image:  url('../images/Govi2023.jpg');
+    background-image: url('../images/Govi2023.jpg');
     background-size: cover;
     background-position: center;
     text-align: center;
 }
-.intro-text{
+.intro-text {
     padding-top: 200px;
     padding-bottom: 100px;
 }
@@ -51,10 +50,10 @@ export default{
 .custom-header-text {
     font-size: 1.5rem;
     margin-bottom: 20px;
-    font-family: "Playfair Display", serif;
+    font-family: 'Playfair Display', serif;
     font-style: italic;
 }
-.custom-subtitle-text{
+.custom-subtitle-text {
     font-size: 3rem;
     margin-bottom: 30px;
     font-weight: 700;

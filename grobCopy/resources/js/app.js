@@ -1,10 +1,11 @@
-import '../css/custom-styles.scss';  // importa tu SCSS personalizado
+import '../css/custom-styles.scss'; // importa tu SCSS personalizado
 
-import { createApp } from 'vue'; 
+import { createApp } from 'vue';
 import App from '../views/App.vue';
 import router from './router';
 
-import * as bootstrap from 'bootstrap'; // Importa JS completo de Bootstrap
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 
 const app = createApp(App);
 

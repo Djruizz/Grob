@@ -1,20 +1,20 @@
 <template>
-<div class="text-center head-section mb-5 mt-3">
-    <h1 class="text-uppercase">{{headInfo.title}}</h1>
-    <h3 class="text-primary">{{headInfo.subtitle}}</h3>  
-</div>
+    <div class="text-center head-section mb-5 mt-3">
+        <h1 class="text-uppercase">{{ headInfo.title }}</h1>
+        <h3 class="text-primary">{{ headInfo.subtitle }}</h3>
+    </div>
 </template>
 
 <script>
 export default {
-    name: "HeadComponent",
-    props:{
-        headInfo:{
-            type:Object,
+    name: 'HeadComponent',
+    props: {
+        headInfo: {
+            type: Object,
             required: true,
-        }
-    }
-}
+        },
+    },
+};
 </script>
 
 <style scoped>
@@ -25,7 +25,7 @@ export default {
 .head-section h3 {
     font-size: 1rem;
     font-weight: 500;
-    font-family: "Playfair Display", serif;
+    font-family: 'Playfair Display', serif;
     font-style: italic;
 }
 </style>
